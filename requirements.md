@@ -24,10 +24,12 @@
 
 Подключитесь к контейнеру DWH с помощью Debeaver:
 
+    login: de
+    password: de
+
 ![image info](https://github.com/xxxRichiexxx/NEOFLEX_1/blob/main/img/Debeaver.PNG)
 
 Примените в базе данных bank следующие скрипты "Neoflex_1/DDL.sql".
-
 
 Зайдите в Airflow по следующей ссылке:
 
@@ -40,9 +42,9 @@
 
 Создайте в Airflow подключение к DWH:
 
+![image info](https://github.com/xxxRichiexxx/NEOFLEX_1/blob/main/img/Airflow.PNG)
 
 Запустите DAGи.
-
 
 При выполнении задания использовался следующий подход:
 
@@ -56,8 +58,10 @@
 
 Работа дагов логируется средствами Airflow и по заданию промсходлит запись логов в специальную таблицу LOGS.DAG_LOGS.
 
-СКРИН с логами
+![image info](https://github.com/xxxRichiexxx/NEOFLEX_1/blob/main/img/Logs.PNG)
 
 Кроме того, данные, не загруженные в слой DDS (из-за невыполнения ограничений) копируются в слой REJECTED_DATA.
 
-Скрин с DDS.
+Модель слоя DDS выглядит следующим образом:
+
+![image info](https://github.com/xxxRichiexxx/NEOFLEX_1/blob/main/img/ERD.PNG)
