@@ -24,7 +24,7 @@
 
 Подключитесь к контейнеру DWH с помощью Debeaver:
 
-![image info](https://github.com/xxxRichiexxx/NEOFLEX_1/blob/main/src/img/Debeaver.PNG)
+![image info](https://github.com/xxxRichiexxx/NEOFLEX_1/blob/main/img/Debeaver.PNG)
 
 Примените в базе данных bank следующие скрипты "Neoflex_1/DDL.sql".
 
