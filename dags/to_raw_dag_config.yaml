@@ -2,7 +2,7 @@ dag1:
   tags:
     - raw
     - Задание_1
-  schedule_interval: '@once'
+  schedule_interval: '@daily'
   start_date: 2023-12-29 00:00:00
   csv_path: '/opt/airflow/Data/ft_balance_f.csv'
   chunksize: 10000
@@ -13,7 +13,7 @@ dag2:
   tags:
     - raw
     - Задание_1
-  schedule_interval: '@once'
+  schedule_interval: '@daily'
   start_date: 2023-12-29 00:00:00
   csv_path: '/opt/airflow/Data/ft_posting_f.csv'
   chunksize: 10000
@@ -24,7 +24,7 @@ dag3:
   tags:
     - raw
     - Задание_1
-  schedule_interval: '@once'
+  schedule_interval: '@daily'
   start_date: 2023-12-29 00:00:00
   csv_path: '/opt/airflow/Data/md_account_d.csv'
   chunksize: 10000
@@ -35,7 +35,7 @@ dag4:
   tags:
     - raw
     - Задание_1
-  schedule_interval: '@once'
+  schedule_interval: '@daily'
   start_date: 2023-12-29 00:00:00
   csv_path: '/opt/airflow/Data/md_currency_d.csv'
   chunksize: 10000
@@ -46,7 +46,7 @@ dag5:
   tags:
     - raw
     - Задание_1
-  schedule_interval: '@once'
+  schedule_interval: '@daily'
   start_date: 2023-12-29 00:00:00
   csv_path: '/opt/airflow/Data/md_exchange_rate_d.csv'
   chunksize: 20000
@@ -57,7 +57,7 @@ dag6:
   tags:
     - raw
     - Задание_1
-  schedule_interval: '@once'
+  schedule_interval: '@daily'
   start_date: 2023-12-29 00:00:00
   csv_path: '/opt/airflow/Data/md_ledger_account_s.csv'
   chunksize: 10000
