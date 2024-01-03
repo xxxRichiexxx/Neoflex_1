@@ -1,0 +1,65 @@
+dag1:
+  tags:
+    - raw
+    - Задание_1
+  schedule_interval: '@once'
+  start_date: 2023-12-29 00:00:00
+  csv_path: '/opt/airflow/Data/ft_balance_f.csv'
+  chunksize: 10000
+  dwh_table: 'RAW.FT_BALANCE_F'
+  dag_id: 'RAW.FT_BALANCE_F'
+
+dag2:
+  tags:
+    - raw
+    - Задание_1
+  schedule_interval: '@once'
+  start_date: 2023-12-29 00:00:00
+  csv_path: '/opt/airflow/Data/ft_posting_f.csv'
+  chunksize: 10000
+  dwh_table: 'RAW.FT_POSTING_F'
+  dag_id: 'RAW.FT_POSTING_F'
+
+dag3:
+  tags:
+    - raw
+    - Задание_1
+  schedule_interval: '@once'
+  start_date: 2023-12-29 00:00:00
+  csv_path: '/opt/airflow/Data/md_account_d.csv'
+  chunksize: 10000
+  dwh_table: 'RAW.MD_ACCOUNT_D'
+  dag_id: 'RAW.MD_ACCOUNT_D'
+
+dag4:
+  tags:
+    - raw
+    - Задание_1
+  schedule_interval: '@once'
+  start_date: 2023-12-29 00:00:00
+  csv_path: '/opt/airflow/Data/md_currency_d.csv'
+  chunksize: 10000
+  dwh_table: 'RAW.MD_CURRENCY_D'
+  dag_id: 'RAW.MD_CURRENCY_D'
+
+dag5:
+  tags:
+    - raw
+    - Задание_1
+  schedule_interval: '@once'
+  start_date: 2023-12-29 00:00:00
+  csv_path: '/opt/airflow/Data/md_exchange_rate_d.csv'
+  chunksize: 20000
+  dwh_table: 'RAW.MD_EXCHANGE_RATE_D'
+  dag_id: 'RAW.MD_EXCHANGE_RATE_D'
+
+dag6:
+  tags:
+    - raw
+    - Задание_1
+  schedule_interval: '@once'
+  start_date: 2023-12-29 00:00:00
+  csv_path: '/opt/airflow/Data/md_ledger_account_s.csv'
+  chunksize: 10000
+  dwh_table: 'RAW.MD_LEDGER_ACCOUNT_S'
+  dag_id: 'RAW.MD_LEDGER_ACCOUNT_S'
