@@ -25,12 +25,10 @@ FROM
         ) p
 INNER JOIN DDS.MD_ACCOUNT_D ca 
     ON p.credit_account_rk::INT = ca.account_rk
-        AND p.oper_date::DATE >= ca.data_actual_date
-        AND p.oper_date::DATE <= ca.data_actual_end_date
+        AND p.oper_date::DATE BETWEEN ca.data_actual_date AND ca.data_actual_end_date
 INNER JOIN DDS.MD_ACCOUNT_D da 
     ON p.debet_account_rk::INT = da.account_rk
-        AND p.oper_date::DATE >= da.data_actual_date
-        AND p.oper_date::DATE <= da.data_actual_end_date
+        AND p.oper_date::DATE BETWEEN da.data_actual_date AND da.data_actual_end_date
 WHERE row_number = 1;
 
 --Вставка данных из временной таблицы в целевую таблицу слоя DDS/ODS

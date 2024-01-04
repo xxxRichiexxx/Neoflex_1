@@ -90,5 +90,5 @@ with DAG(
 
     await_dags >> start >> [MD_CURRENCY_D_upsert, MD_LEDGER_ACCOUNT_S_upsert]
     MD_CURRENCY_D_upsert >> [MD_EXCHANGE_RATE_D_upsert, MD_ACCOUNT_D_upsert]
-    MD_LEDGER_ACCOUNT_S_upsert >> [MD_EXCHANGE_RATE_D_upsert, MD_ACCOUNT_D_upsert]
+    MD_LEDGER_ACCOUNT_S_upsert >> MD_ACCOUNT_D_upsert
     MD_ACCOUNT_D_upsert >> [FT_POSTING_F_upsert, FT_BALANCE_F_upsert] >> end

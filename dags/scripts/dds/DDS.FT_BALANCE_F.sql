@@ -21,12 +21,10 @@ FROM
         AND balance_out IS NOT NULL) b
 INNER JOIN DDS.MD_ACCOUNT_D a 
     ON b.account_rk::INT = a.account_rk
-    AND TO_DATE(b.on_date, 'DD.MM.YYYY') >= a.data_actual_date
-    AND TO_DATE(b.on_date, 'DD.MM.YYYY') <= a.data_actual_end_date
+    AND TO_DATE(b.on_date, 'DD.MM.YYYY') BETWEEN a.data_actual_date AND a.data_actual_end_date
 INNER JOIN DDS.MD_CURRENCY_D c
     ON b.currency_rk::INT = c.currency_rk
-    AND TO_DATE(b.on_date, 'DD.MM.YYYY') >= c.data_actual_date
-    AND TO_DATE(b.on_date, 'DD.MM.YYYY') <= c.data_actual_end_date
+    AND TO_DATE(b.on_date, 'DD.MM.YYYY') BETWEEN c.data_actual_date AND c.data_actual_end_date
 WHERE row_number = 1;
 
 --Вставка данных из временной таблицы в целевую таблицу слоя DDS/ODS
